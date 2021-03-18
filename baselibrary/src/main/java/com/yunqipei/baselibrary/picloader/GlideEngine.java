@@ -1,24 +1,19 @@
 package com.yunqipei.baselibrary.picloader;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.PointF;
-import android.graphics.drawable.Drawable;
-import android.view.View;
 import android.widget.ImageView;
-
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.request.RequestOptions;
-import com.bumptech.glide.request.target.ImageViewTarget;
-import com.yunqipei.baselibrary.R;
+
 
 public class GlideEngine {
+
     /**
      * 加载图片
      *
