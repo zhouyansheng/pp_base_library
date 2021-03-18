@@ -7,11 +7,6 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 
-import androidx.annotation.ColorRes;
-import androidx.annotation.StringRes;
-import androidx.core.content.ContextCompat;
-
-
 public class UiUtils {
 
     public static void setAndroidNativeLightStatusBar(Activity activity, boolean dark) {

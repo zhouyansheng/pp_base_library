@@ -8,9 +8,9 @@ import androidx.fragment.app.Fragment
 import com.yunqipei.baselibrary.R
 
 
-class BaseFragment : Fragment() {
+open class BaseFragment : Fragment() {
 
-    protected val TAG : String = this.javaClass.name
+    protected open lateinit var TAG : String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +21,7 @@ class BaseFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val rootView = inflater.inflate(fetchLayoutId(), container, false)
+        TAG = this.javaClass.name
         initView()
         return rootView
     }

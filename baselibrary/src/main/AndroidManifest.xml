@@ -3,7 +3,8 @@
     package="com.yunqipei.baselibrary">
 
     <application>
-        <activity android:name=".base.BaseActivity"></activity>
+        <activity android:name=".base.TakePhotoActivity"></activity>
+        <activity android:name=".base.BaseActivity" />
     </application>
 
 </manifest>

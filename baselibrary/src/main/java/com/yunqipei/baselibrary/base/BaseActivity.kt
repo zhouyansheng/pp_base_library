@@ -7,11 +7,12 @@ import com.handarui.iqfun.util.AppManager
 abstract class BaseActivity : AppCompatActivity() {
 
 
-    protected val TAG : String = this.javaClass.name
+    protected open lateinit var TAG : String
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        TAG = this.javaClass.name
         if (fetchLayoutId() != 0) {
             setContentView(fetchLayoutId())
         }
