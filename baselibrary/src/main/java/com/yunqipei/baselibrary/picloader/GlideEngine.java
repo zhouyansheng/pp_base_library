@@ -72,7 +72,6 @@ public class GlideEngine {
         Glide.with(context)
                 .load(url)
                 .transform (new CircleCrop())
-                .placeholder(defaultImage)
                 .into(imageView);
 
     }

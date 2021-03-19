@@ -8,12 +8,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.yunqipei.baselibrary.R
-import com.yunqipei.baselibrary.databinding.SelectPicDialogBinding
-import com.yunqipei.baselibrary.utils.UiUtils
+import com.yunqipei.baselibrary.databinding.ShareCommonDialogBinding
 
-class SelectPicDialog@JvmOverloads constructor(context: Context, private val buttonClickCallback: ButtonClickCallback? = null) : Dialog(context, R.style.CustomDialogStyle)  {
+class ShareCommonDialog@JvmOverloads constructor(context: Context, private val buttonClickCallback: ButtonClickCallback? = null) : Dialog(context, R.style.CustomDialogStyle) {
 
-    private lateinit var binding: SelectPicDialogBinding
+    private lateinit var binding: ShareCommonDialogBinding
 
     init {
         window?.setGravity(Gravity.BOTTOM)
@@ -24,33 +23,27 @@ class SelectPicDialog@JvmOverloads constructor(context: Context, private val but
         window?.attributes = lp
     }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.select_pic_dialog, null, false)
+        binding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.share_common_dialog, null, false)
         setContentView(binding.root)
         binding.dialog = this
         setCancelable(true)
-
     }
 
-
-    fun cancelDialog(){
+    fun weixin(){
+        buttonClickCallback?.clickWX()
         dismiss()
     }
 
-
-    fun takePhoto(){
-        buttonClickCallback?.clickTakePhoto()
-    }
-
-    fun album(){
-        buttonClickCallback?.clickAlbum()
+    fun friend(){
+        buttonClickCallback?.clickFriend()
+        dismiss()
     }
 
     interface ButtonClickCallback {
-        fun clickTakePhoto()
-        fun clickAlbum()
+        fun clickWX()
+        fun clickFriend()
     }
 
 }

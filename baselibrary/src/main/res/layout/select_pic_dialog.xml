@@ -24,7 +24,6 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/take_photo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -39,7 +38,7 @@
                 android:background="#ebebeb" />
 
             <TextView
-                android:id="@+id/select_from_album"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
