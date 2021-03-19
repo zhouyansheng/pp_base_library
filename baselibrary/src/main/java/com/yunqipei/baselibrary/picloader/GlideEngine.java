@@ -69,7 +69,11 @@ public class GlideEngine {
      */
     public void loadCircleImage(@NonNull Context context, @NonNull String url, @NonNull ImageView imageView, @NonNull int defaultImage){
 
-        Glide.with(context).load(url).transform (new CircleCrop()).placeholder(defaultImage).into(imageView);
+        Glide.with(context)
+                .load(url)
+                .transform (new CircleCrop())
+                .placeholder(defaultImage)
+                .into(imageView);
 
     }
 
@@ -82,7 +86,11 @@ public class GlideEngine {
      * @param defaultCorners 圆角角度
      */
     public void loadRoundedCornersImage(@NonNull Context context, @NonNull String url, @NonNull ImageView imageView, @NonNull int defaultCorners){
-        Glide.with(context).load(url).apply(new RequestOptions().transform(new CenterCrop(),  new RoundedCorners(defaultCorners))).into(imageView);
+        Glide.with(context)
+                .load(url)
+                .apply(new RequestOptions()
+                        .transform(new CenterCrop(),  new RoundedCorners(defaultCorners)))
+                .into(imageView);
     }
 
 
