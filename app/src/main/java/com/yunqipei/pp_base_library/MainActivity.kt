@@ -7,7 +7,6 @@ import android.os.Environment
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
-import com.bumptech.glide.Glide
 import com.jph.takephoto.model.TResult
 import com.yunqipei.baselibrary.base.TakePhotoActivity
 import com.yunqipei.baselibrary.basedialog.CommentDialog
